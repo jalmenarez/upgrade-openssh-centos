@@ -14,17 +14,17 @@
 # limitations under the License.
 #
 # Tool to build OpenSSH RPM package for rhel6 & rhel7, not yet tested on rhel8.
-# Build test pass on Centos 7 with openssh version {7.9p1,8.0p1,8.1p1,8.2p1,8.3p1}
+# Build test pass on Centos 7 with openssh version {7.9p1,8.0p1,8.1p1,8.2p1,8.3p1,8.6p1}
 #
 # Usage:
 #   bash <(curl -sSL https://github.com/Junyangz/upgrade-openssh-centos/raw/master/build-RPMs-OpenSSH-CentOS.sh) \
-#       --version 8.3p1  \
+#       --version 8.6p1  \
 #       --output_rpm_dir /tmp/tmp.dirs \
 #       --upgrade_now yes
 #
 # Arguments:
 #   version: The OpenSSH version to build, one of
-#     the {7.9p1,8.0p1,8.1p1,8.2p1,8.3p1}.
+#     the {7.9p1,8.0p1,8.1p1,8.2p1,8.3p1,8.6p1}.
 #   output_rpm_dir: The output directory for rpm package to place.
 #   upgrade_now: Whether install upgrade rpms now, yes or no.
 set -e
@@ -41,7 +41,7 @@ die() {
 
 usage() {
     local script_name=$(basename "${0}")
-    echo "usage: ${script_name} [--version {7.9p1,8.0p1,8.1p1,8.2p1,8.3p1}] [--output_rpm_dir PATH] [--upgrade_now yes|no]"
+    echo "usage: ${script_name} [--version {7.9p1,8.0p1,8.1p1,8.2p1,8.3p1,8.6p1}] [--output_rpm_dir PATH] [--upgrade_now yes|no]"
 }
 
 build_RPMs() {
@@ -100,7 +100,7 @@ upgrade_openssh() {
 
 main() {
     # Parse arguments
-    local version="8.3p1"
+    local version="8.6p1"
     local output_rpm_dir=""
     local upgrade_now=""
     local install_only=""
