@@ -72,6 +72,9 @@ upgrade_openssh() {
 }
 ```
 
+## Uninstall
+// TODO: Add how to uninstall all
+
 More information please refer `build-RPMs-OpenSSH-CentOS.sh` script.
 
 The [release page](https://github.com/Junyangz/upgrade-openssh-centos/releases) has some RPMs that I built, feel free to use it.
