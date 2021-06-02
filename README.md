@@ -1,12 +1,12 @@
 # Upgrade OpenSSH for CentOS
 
-Support the OpenSSH version {7.9p1,8.0p1,8.1p1,8.2p1,8.3p1}.
+Support the OpenSSH version {7.9p1,8.0p1,8.1p1,8.2p1,8.3p1,8.6p1}.
 
 ## Usage
 
 ```bash
-bash <(curl -sSL https://github.com/Junyangz/upgrade-openssh-centos/raw/master/build-RPMs-OpenSSH-CentOS.sh) \
-    --version 8.3p1  \
+bash <(curl -sSL https://github.com/jalmenarez/upgrade-openssh-centos/raw/master/build-RPMs-OpenSSH-CentOS.sh) \
+    --version 8.6p1  \
     --output_rpm_dir /tmp/tmp.dirs \
     --upgrade_now yes
 ```
